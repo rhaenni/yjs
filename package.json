@@ -22,7 +22,7 @@
     "debug": "concurrently 'http-server -o test.html' 'npm run watch'",
     "trace-deopt": "clear && rollup -c  && node --trace-deopt dist/test.cjs",
     "trace-opt": "clear && rollup -c  && node --trace-opt dist/test.cjs",
-    "postinstall": "node ./sponsor-y.js"
+    "postinstall": "npm run dist && node ./sponsor-y.js"
   },
   "exports": {
     ".": {
@@ -38,7 +38,10 @@
     "dist/src",
     "src",
     "tests/testHelper.js",
-    "sponsor-y.js"
+    "sponsor-y.js",
+    "rollup.config.js",
+    "tsconfig.json",
+    "test"
   ],
   "dictionaries": {
     "test": "tests"
@@ -70,11 +73,12 @@
   },
   "homepage": "https://docs.yjs.dev",
   "dependencies": {
-    "lib0": "^0.2.38"
+    "lib0": "^0.2.38",
+    "typescript": "^4.1.5",
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-node-resolve": "^11.2.0"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^17.0.0",
-    "@rollup/plugin-node-resolve": "^11.2.0",
     "concurrently": "^3.6.1",
     "http-server": "^0.12.3",
     "jsdoc": "^3.6.6",
@@ -82,7 +86,6 @@
     "rollup": "^2.39.0",
     "standard": "^14.3.4",
     "tui-jsdoc-template": "^1.2.2",
-    "typescript": "^4.1.5",
     "y-protocols": "^1.0.4"
   }
 }
