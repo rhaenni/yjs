@@ -22,7 +22,7 @@
     "debug": "concurrently 'http-server -o test.html' 'npm run watch'",
     "trace-deopt": "clear && rollup -c  && node --trace-deopt dist/test.cjs",
     "trace-opt": "clear && rollup -c  && node --trace-opt dist/test.cjs",
-    "postinstall": "node ./sponsor-y.js"
+    "postinstall": "npm run dist && node ./sponsor-y.js"
   },
   "exports": {
     ".": {
