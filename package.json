@@ -22,7 +22,7 @@
     "debug": "concurrently 'http-server -o test.html' 'npm run watch'",
     "trace-deopt": "clear && rollup -c  && node --trace-deopt dist/test.cjs",
     "trace-opt": "clear && rollup -c  && node --trace-opt dist/test.cjs",
-    "postinstall": "node ./sponsor-y.js"
+    "postinstall": "npm run dist && node ./sponsor-y.js"
   },
   "exports": {
     ".": {
@@ -75,6 +75,7 @@
     "standard": "^14.3.4",
     "tui-jsdoc-template": "^1.2.2",
     "y-protocols": "^1.0.4",
+    "@types/eslint": "6.8.0",
     "eslint": "6.8.0"
   },
   "devDependencies": {}
