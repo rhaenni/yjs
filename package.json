@@ -63,6 +63,7 @@
   },
   "homepage": "https://docs.yjs.dev",
   "dependencies": {
+    "@types/estree": "0.0.39",
     "lib0": "^0.2.38",
     "typescript": "^4.1.5",
     "@rollup/plugin-commonjs": "^17.0.0",
