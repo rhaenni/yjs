@@ -64,7 +64,7 @@
   "homepage": "https://docs.yjs.dev",
   "dependencies": {
     "lib0": "^0.2.38",
-    "typescript": "^4.1.5",
+    "typescript": "4.1.5",
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.2.0",
     "rollup": "^2.39.0",
