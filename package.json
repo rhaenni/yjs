@@ -41,7 +41,7 @@
     "sponsor-y.js",
     "rollup.config.js",
     "tsconfig.json",
-    "test"
+    "tests"
   ],
   "dictionaries": {
     "test": "tests"
