@@ -22,7 +22,8 @@
     "debug": "concurrently 'http-server -o test.html' 'npm run watch'",
     "trace-deopt": "clear && rollup -c  && node --trace-deopt dist/test.cjs",
     "trace-opt": "clear && rollup -c  && node --trace-opt dist/test.cjs",
-    "postinstall": "npm run dist && node ./sponsor-y.js"
+    "postinstall": "npm run dist && node ./sponsor-y.js",
+    "fixtsc": "replace-in-files --string='yjs/src/' --replacement='./' dist/src/*.ts && replace-in-files --string='yjs/src/' --replacement='../' dist/src/*/*.ts"
   },
   "exports": {
     ".": {
@@ -77,7 +78,8 @@
     "y-protocols": "^1.0.4",
     "@types/eslint": "6.8.0",
     "eslint": "6.8.0",
-    "babel-loader": "8.1.0"
+    "babel-loader": "8.1.0",
+    "replace-in-files-cli": "1.0.0"
   },
   "devDependencies": {}
 }
